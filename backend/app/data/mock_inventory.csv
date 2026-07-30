@@ -1,0 +1,8 @@
+region,quarter,sku_category,stockout_events,stockout_rate_pct,prior_quarter_rate_pct
+North,Q2-2026,Warehouse Equipment,412,18.4,10.6
+North,Q2-2026,Spare Parts,389,21.2,12.8
+North,Q2-2026,Safety Gear,201,9.7,7.1
+South,Q2-2026,Warehouse Equipment,120,6.1,5.8
+South,Q2-2026,Spare Parts,98,5.4,5.0
+East,Q2-2026,Warehouse Equipment,88,4.2,4.0
+West,Q2-2026,Warehouse Equipment,133,6.8,6.2

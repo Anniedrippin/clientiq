@@ -1,0 +1,5 @@
+region,quarter,revenue_usd,prior_quarter_revenue_usd,units_sold,churned_accounts,active_accounts
+North,Q2-2026,14650000,16650000,58200,142,3210
+South,Q2-2026,11200000,10950000,44210,58,2870
+East,Q2-2026,9800000,9600000,39120,41,2410
+West,Q2-2026,10120000,9990000,40510,47,2530

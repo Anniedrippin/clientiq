@@ -1,0 +1,21 @@
+# Environment files
+# Ignore backend environment file
+backend/.env
+
+# Keep the example file
+!backend/.env.example
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
