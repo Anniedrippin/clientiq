@@ -1,21 +1,44 @@
-# Environment files
-# Ignore backend environment file
+# =========================
+# Environment
+# =========================
 backend/.env
-
-# Keep the example file
 !backend/.env.example
-# Virtual environment
+
+# =========================
+# Python
+# =========================
 venv/
 .venv/
-
-# Python cache
 __pycache__/
 *.py[cod]
+*.log
 
+# ChromaDB
+backend/chroma_data/
+chroma_data/
+
+backend/clientiq.log
+
+# =========================
+# Node.js
+# =========================
+node_modules/
+frontend/node_modules/
+
+
+# Build outputs
+dist/
+build/
+.next/
+
+# =========================
 # IDE
+# =========================
 .vscode/
 .idea/
 
+# =========================
 # OS
+# =========================
 .DS_Store
 Thumbs.db
