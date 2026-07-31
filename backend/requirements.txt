@@ -10,3 +10,4 @@ langgraph==0.2.34
 langchain-core==0.3.10
 chromadb==0.5.15
 reportlab==4.2.2
+bcrypt==3.2.2
