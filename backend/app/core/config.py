@@ -27,10 +27,16 @@ class Settings(BaseSettings):
     SALESFORCE_ORG: str = os.getenv("SALESFORCE_ORG", "mock://crm")
     GOOGLE_SHEETS_ID: str = os.getenv("GOOGLE_SHEETS_ID", "mock://forecast-sheet")
 
-    CORS_ORIGINS: list = ["http://localhost:5173", "http://localhost:3000"]
+    CORS_ORIGINS_RAW: str = os.getenv(
+    "CORS_ORIGINS", "http://localhost:5173,http://localhost:3000"
+)
 
     class Config:
         env_file = ".env"
+
+    @property
+    def CORS_ORIGINS(self) -> list:
+        return [origin.strip() for origin in self.CORS_ORIGINS_RAW.split(",") if origin.strip()]
 
 
 settings = Settings()
