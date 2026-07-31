@@ -1,0 +1,32 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+#
+# In the Render dashboard: New -> Blueprint -> connect this repo. Render will
+# read this file and provision the web service below automatically. You'll
+# still need to set GROQ_API_KEY (optional) and CORS_ORIGINS (your Vercel
+# URL) as env vars after the first deploy — see backend/.env.example.
+
+services:
+  - type: web
+    name: clientiq-backend
+    runtime: python
+    rootDir: backend
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: ENV
+        value: production
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: GROQ_API_KEY
+        sync: false          # set manually in the dashboard (optional)
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: CHROMA_PERSIST_DIR
+        value: ./chroma_data
+      - key: CORS_ORIGINS
+        sync: false          # set manually once you have your Vercel URL
